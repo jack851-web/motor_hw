@@ -1,0 +1,18 @@
+motor_ports:
+  - port: "/dev/ttyACM0"
+    baudrate: 921600
+  - port: "/dev/ttyACM1"
+    baudrate: 921600
+
+motors:
+  - port: "/dev/ttyACM0"
+    can_id: 0x01
+    master_id: 0x11
+    name: "motor_1_joint"
+    type: "DM10010"
+  - port: "/dev/ttyACM1"
+    can_id: 0x02
+    master_id: 0x12
+    name: "motor_2_joint"
+    type: "DM10010"
+  

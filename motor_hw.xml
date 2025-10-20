@@ -1,0 +1,10 @@
+
+<library path="motor_hw">
+  <class name="motor_hw/motor_interface" 
+         type="motor_interface" 
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Motor hardware interface for DM motors
+    </description>
+  </class>
+</library>
