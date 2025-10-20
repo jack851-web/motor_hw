@@ -268,8 +268,8 @@ return_type motor_interface::write(const rclcpp::Time& /*time*/, const rclcpp::D
             {
                 if (can_entry.second.name == joint_name)
                 {
-                    //can_entry.second.cmd_vel = joint_velocities_command_[ind];
-                    can_entry.second.cmd_vel = 0.1;
+                    can_entry.second.cmd_vel = joint_velocities_command_[ind];
+                    //can_entry.second.cmd_vel = 0.1;
                     found = true;
                     break;
                 }
@@ -296,8 +296,8 @@ return_type motor_interface::write(const rclcpp::Time& /*time*/, const rclcpp::D
                 {
                     can_entry.second.cmd_effort = joint_torque_command_[ind];
                     //can_entry.second.cmd_effort = 1.0;
-                    //can_entry.second.kp = joint_kp_command_[ind];
-                    can_entry.second.kp = 1;
+                    can_entry.second.kp = joint_kp_command_[ind];
+                    //can_entry.second.kp = 1;
                     can_entry.second.kd = joint_kd_command_[ind];
                     found = true;
                     break;
