@@ -36,7 +36,7 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn motor_
     // 验证每个关节的接口配置
   for (const hardware_interface::ComponentInfo & joint : info_.joints)
   {
-    // RRBotSystemPositionOnly在每个关节上有5个命令接口
+    // 每个关节上有5个命令接口
     if (joint.command_interfaces.size() != 5)
     {
       RCLCPP_FATAL(
@@ -45,7 +45,7 @@ rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn motor_
       return hardware_interface::CallbackReturn::ERROR;
     }
 
-    // RRBotSystemPositionOnly在每个关节上有3个状态接口
+    // 每个关节上有3个状态接口
     if (joint.state_interfaces.size() != 3)
     {
       RCLCPP_FATAL(
